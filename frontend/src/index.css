@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+@theme {
   /* Colors */
   --color-primary: #092c4c;
   --color-secondary: #f9d7bd;
@@ -32,12 +32,6 @@
   --font-size-small-regular: 14px;
 }
 
-body {
-  font-family: var(--font-family-main);
-  background: var(--color-background);
-  color: var(--color-black-1);
-}
-
 h1 {
   font-size: var(--font-size-h5);
   font-family: var(--font-family-main);
@@ -52,7 +46,6 @@ h2 {
   font-size: var(--font-size-h6);
   font-family: var(--font-family-main);
   font-weight: bold;
-  color: var(--color-primary);
 
   @media (width > 640px) {
     font-size: var(--font-size-h2);
@@ -86,7 +79,6 @@ h6 {
 p {
   font-size: var(--font-size-small-regular);
   font-family: var(--font-family-main);
-  color: var(--color-primary);
 
   @media (width > 640px) {
     font-size: var(--font-size-normal-regular);
