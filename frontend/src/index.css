@@ -39,16 +39,24 @@ body {
 }
 
 h1 {
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-h5);
   font-family: var(--font-family-main);
   font-weight: bold;
   color: var(--color-primary);
+
+  @media (width > 640px) {
+    font-size: var(--font-size-h1);
+  }
 }
 h2 {
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h6);
   font-family: var(--font-family-main);
   font-weight: bold;
   color: var(--color-primary);
+
+  @media (width > 640px) {
+    font-size: var(--font-size-h2);
+  }
 }
 h3 {
   font-size: var(--font-size-h3);
@@ -73,4 +81,14 @@ h6 {
   font-family: var(--font-family-main);
   font-weight: bold;
   color: var(--color-primary);
+}
+
+p {
+  font-size: var(--font-size-small-regular);
+  font-family: var(--font-family-main);
+  color: var(--color-primary);
+
+  @media (width > 640px) {
+    font-size: var(--font-size-normal-regular);
+  }
 }
