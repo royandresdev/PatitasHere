@@ -1,1 +1,76 @@
 @import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-primary: #092c4c;
+  --color-secondary: #f9d7bd;
+  --color-info: #dedede;
+  --color-success: #bdf9c4;
+  --color-warning: #f9f0bd;
+  --color-error: #f9bbdd;
+  --color-black-1: #262b2f;
+  --color-black-2: #2b2b2b;
+  --color-grey-1: #4d4d4d;
+  --color-grey-2: #b2b2b2;
+  --color-background: #fafafa;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-family-main: "Poppins", sans-serif;
+  --font-size-h1: 40px;
+  --font-size-h2: 32px;
+  --font-size-h3: 28px;
+  --font-size-h4: 24px;
+  --font-size-h5: 20px;
+  --font-size-h6: 16px;
+  --font-size-large-bold: 24px;
+  --font-size-large-regular: 24px;
+  --font-size-large-light: 24px;
+  --font-size-normal-bold: 16px;
+  --font-size-normal-regular: 16px;
+  --font-size-small-bold: 14px;
+  --font-size-small-regular: 14px;
+}
+
+body {
+  font-family: var(--font-family-main);
+  background: var(--color-background);
+  color: var(--color-black-1);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-family: var(--font-family-main);
+  font-weight: bold;
+  color: var(--color-primary);
+}
+h2 {
+  font-size: var(--font-size-h2);
+  font-family: var(--font-family-main);
+  font-weight: bold;
+  color: var(--color-primary);
+}
+h3 {
+  font-size: var(--font-size-h3);
+  font-family: var(--font-family-main);
+  font-weight: bold;
+  color: var(--color-primary);
+}
+h4 {
+  font-size: var(--font-size-h4);
+  font-family: var(--font-family-main);
+  font-weight: bold;
+  color: var(--color-primary);
+}
+h5 {
+  font-size: var(--font-size-h5);
+  font-family: var(--font-family-main);
+  font-weight: bold;
+  color: var(--color-primary);
+}
+h6 {
+  font-size: var(--font-size-h6);
+  font-family: var(--font-family-main);
+  font-weight: bold;
+  color: var(--color-primary);
+}
