@@ -52,10 +52,14 @@ h2 {
   }
 }
 h3 {
-  font-size: var(--font-size-h3);
+  font-size: var(--font-size-h6);
   font-family: var(--font-family-main);
   font-weight: bold;
   color: var(--color-primary);
+
+  @media (width > 640px) {
+    font-size: var(--font-size-h3);
+  }
 }
 h4 {
   font-size: var(--font-size-h4);
