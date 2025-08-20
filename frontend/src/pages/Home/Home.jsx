@@ -1,4 +1,4 @@
-import { Hero, PetFilterCard } from '../../components'
+import { Hero, PetCard, PetFilterCard } from '../../components'
 
 const Home = () => {
   return (
@@ -92,9 +92,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='px-4'>
+      <section className='px-4 space-y-3'>
         <h2 className='text-center text-primary'>Adopción urgente</h2>
         <p className='text-center text-primary'>Estas mascotas necesitan un hogar con urgencia. Cada una tiene una historia especial y está esperando encontrar una familia que las ame.</p>
+        <div className='grid grid-cols-1 gap-3 py-4'>
+          <PetCard />
+        </div>
       </section>
     </div>
   )
