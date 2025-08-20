@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Icon } from "@iconify/react";
 
 const PetCard = ({ nombre, sexo, edad, tamaño, caracter, imagen, id }) => {
   const decodeText = (text) => {
@@ -36,13 +37,18 @@ const PetCard = ({ nombre, sexo, edad, tamaño, caracter, imagen, id }) => {
         </h3>
         {/* Pet details */}
         <div className='space-y-1'>
-          <p className='text-primary'>Sexo: {sexo}</p>
-          <p className='text-primary'>Edad: {edad}</p>
-          <p className='text-primary'>Tamaño: {tamaño}</p>
-          <p className='text-primary'>Carácter: {decodeText(caracter)}</p>
+          <p className='text-primary flex gap-2'>
+            <Icon icon="streamline-plump:intersex-symbol-remix" className='text-xl' /> Sexo: {sexo}
+          </p>
+          <p className='text-primary flex gap-2'>
+            <Icon icon="streamline-flex:pet-paw-solid" className='text-xl' /> Edad: {edad}</p>
+          <p className='text-primary flex gap-2'>
+            <Icon icon="material-symbols:height-rounded" className='text-xl' /> Tamaño: {tamaño}</p>
+          <p className='text-primary flex gap-2'>
+            <Icon icon="material-symbols-light:pet-supplies" className='text-xl' /> Carácter: {decodeText(caracter)}</p>
         </div>
         {/* Adopt button */}
-        <Link className='block text-center text-base font-semibold text-primary bg-[#FDE4D1] rounded-lg py-2 w-full' to={`/petdetails/${id}`}>
+        <Link className='block text-center text-base font-semibold text-primary bg-secondary rounded-lg py-2' to={`/petdetails/${id}`}>
           Adoptar
         </Link>
       </div>

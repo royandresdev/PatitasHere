@@ -92,6 +92,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Section: Urgent adoption */}
       <section className='px-4 space-y-3'>
         <h2 className='text-center text-primary'>Adopción urgente</h2>
         <p className='text-center text-primary'>Estas mascotas necesitan un hogar con urgencia. Cada una tiene una historia especial y está esperando encontrar una familia que las ame.</p>
