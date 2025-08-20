@@ -1,4 +1,5 @@
-import { Hero, PetCard, PetFilterCard } from '../../components'
+import { Link } from 'react-router-dom'
+import { Hero, PetCard, PetFilterCard, TestimonialCard } from '../../components'
 
 const Home = () => {
   return (
@@ -93,11 +94,31 @@ const Home = () => {
       </section>
 
       {/* Section: Urgent adoption */}
-      <section className='px-4 space-y-3'>
+      <section className='container px-4 space-y-3'>
         <h2 className='text-center text-primary'>Adopción urgente</h2>
-        <p className='text-center text-primary'>Estas mascotas necesitan un hogar con urgencia. Cada una tiene una historia especial y está esperando encontrar una familia que las ame.</p>
+        <p className='text-left text-primary'>Estas mascotas necesitan un hogar con urgencia. Cada una tiene una historia especial y está esperando encontrar una familia que las ame.</p>
         <div className='grid grid-cols-1 gap-3 py-4'>
           <PetCard />
+        </div>
+        {/* Button: View all pets */}
+        <Link className='block text-sm font-bold bg-primary px-6 py-3 rounded-lg text-white mx-auto w-fit' to='/pets'>
+          Ver todas las mascotas
+        </Link>
+      </section>
+
+      {/* Section: Testimonials */}
+      <section className='container px-4 py-8 space-y-2'>
+        <h2 className='text-primary text-center'>Historias que nos inspiran</h2>
+        <p className='text-primary text-left'>Conocé las experiencias de quienes ya encontraron a su compañero ideal a través de nuestra plataforma.</p>
+        {/* Testimonials list */}
+        <div className='grid grid-cols-1 gap-3 py-4'>
+          <TestimonialCard
+            profileImage="/path/to/image.jpg"
+            name="María González"
+            adoptedPet="Cloe"
+            rating={5}
+            testimonial="Adoptar a Cloe fue la mejor decisión que tomé. El proceso fue súper fácil y ahora no puedo imaginar mi vida sin ella."
+          />
         </div>
       </section>
     </div>
