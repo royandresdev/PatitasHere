@@ -1,6 +1,30 @@
 import { Link } from 'react-router-dom'
 import { Hero, PetCard, PetFilterCard, TestimonialCard } from '../../components'
 
+const testimonialList = [
+  {
+    profileImage: "/path/to/image.jpg",
+    name: "María González",
+    adoptedPet: "Cloe",
+    testimonial: "Adoptar a Cloe fue la mejor decisión que tomé. El proceso fue súper fácil y ahora no puedo imaginar mi vida sin ella.",
+    rating: 5,
+  },
+  {
+    profileImage: "/path/to/image.jpg",
+    name: "Juan Pérez",
+    adoptedPet: "Max",
+    testimonial: "Max ha traído tanta alegría a nuestra familia. La plataforma hizo que todo el proceso de adopción fuera sencillo y agradable.",
+    rating: 4,
+  },
+  {
+    profileImage: "/path/to/image.jpg",
+    name: "Ana López",
+    adoptedPet: "Luna",
+    testimonial: "Adoptar a Luna ha sido una experiencia maravillosa. La plataforma me guió en cada paso del proceso.",
+    rating: 5,
+  },
+]
+
 const Home = () => {
   return (
     <div id='home' className='space-y-2'>
@@ -111,14 +135,17 @@ const Home = () => {
         <h2 className='text-primary text-center'>Historias que nos inspiran</h2>
         <p className='text-primary text-left'>Conocé las experiencias de quienes ya encontraron a su compañero ideal a través de nuestra plataforma.</p>
         {/* Testimonials list */}
-        <div className='grid grid-cols-1 gap-3 py-4'>
-          <TestimonialCard
-            profileImage="/path/to/image.jpg"
-            name="María González"
-            adoptedPet="Cloe"
-            rating={5}
-            testimonial="Adoptar a Cloe fue la mejor decisión que tomé. El proceso fue súper fácil y ahora no puedo imaginar mi vida sin ella."
-          />
+        <div className='grid grid-cols-1 gap-4 py-4'>
+          {testimonialList.map((testimonial, index) => (
+            <TestimonialCard
+              key={index}
+              profileImage={testimonial.profileImage}
+              name={testimonial.name}
+              adoptedPet={testimonial.adoptedPet}
+              rating={testimonial.rating}
+              testimonial={testimonial.testimonial}
+            />
+          ))}
         </div>
       </section>
     </div>
