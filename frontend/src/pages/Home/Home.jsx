@@ -25,6 +25,36 @@ const testimonialList = [
   },
 ]
 
+const urgentPets = [
+  {
+    id: 1,
+    name: "Coco",
+    gender: "Macho",
+    age: "2 años",
+    size: "Mediano",
+    character: "Juguetón y cariñoso",
+    image: "/pets/coco.jpg",
+  },
+  {
+    id: 2,
+    name: "Mia",
+    gender: "Hembra",
+    age: "1 año",
+    size: "Pequeño",
+    character: "Tranquila y sociable",
+    image: "/pets/mia.jpg",
+  },
+  {
+    id: 3,
+    name: "Simón",
+    gender: "Macho",
+    age: "3 años",
+    size: "Grande",
+    character: "Protector y leal",
+    image: "/pets/simon.jpg",
+  },
+]
+
 const Home = () => {
   return (
     <div id='home' className='space-y-2'>
@@ -122,7 +152,18 @@ const Home = () => {
         <h2 className='text-center text-primary'>Adopción urgente</h2>
         <p className='text-left text-primary'>Estas mascotas necesitan un hogar con urgencia. Cada una tiene una historia especial y está esperando encontrar una familia que las ame.</p>
         <div className='grid grid-cols-1 gap-3 py-4'>
-          <PetCard />
+          {urgentPets.map((pet) => (
+            <PetCard
+              key={pet.id}
+              id={pet.id}
+              gender={pet.gender}
+              character={pet.character}
+              name={pet.name}
+              age={pet.age}
+              size={pet.size}
+              image={pet.image}
+            />
+          ))}
         </div>
         {/* Button: View all pets */}
         <Link className='block text-sm font-bold bg-primary px-6 py-3 rounded-lg text-white mx-auto w-fit' to='/pets'>

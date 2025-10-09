@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Icon } from "@iconify/react";
 
-const PetCard = ({ nombre, sexo, edad, tamaño, caracter, imagen, id }) => {
+const PetCard = ({ name, gender, age, size, character, image, id }) => {
   const decodeText = (text) => {
     try {
       if (!text) return ''
@@ -25,31 +25,34 @@ const PetCard = ({ nombre, sexo, edad, tamaño, caracter, imagen, id }) => {
       <div className='bg-white aspect-video w-full rounded-b-[14px]'>
         <img
           className='w-full h-full rounded-b-4 object-cover object-center'
-          src={`${imagen}`}
-          alt={`Imagen de ${nombre}`}
+          src={`${image}`}
+          alt={`Image of ${name}`}
           onError={handleImageError}
         />
       </div>
       <div className='px-4 space-y-3'>
         {/* Pet name */}
         <h3 className='text-center text-[18px] font-medium mt-[15px] mb-3'>
-          {nombre}
+          {name}
         </h3>
-        {/* Pet details */}
+        {/* Detalles de la mascota */}
         <div className='space-y-1'>
           <p className='text-primary flex gap-2'>
-            <Icon icon="streamline-plump:intersex-symbol-remix" className='text-xl' /> Sexo: {sexo}
+            <Icon icon="streamline-plump:intersex-symbol-remix" className='text-xl' /> Género: {gender}
           </p>
           <p className='text-primary flex gap-2'>
-            <Icon icon="streamline-flex:pet-paw-solid" className='text-xl' /> Edad: {edad}</p>
+            <Icon icon="streamline-flex:pet-paw-solid" className='text-xl' /> Edad: {age}
+          </p>
           <p className='text-primary flex gap-2'>
-            <Icon icon="material-symbols:height-rounded" className='text-xl' /> Tamaño: {tamaño}</p>
+            <Icon icon="material-symbols:height-rounded" className='text-xl' /> Tamaño: {size}
+          </p>
           <p className='text-primary flex gap-2'>
-            <Icon icon="material-symbols-light:pet-supplies" className='text-xl' /> Carácter: {decodeText(caracter)}</p>
+            <Icon icon="material-symbols-light:pet-supplies" className='text-xl' /> Temperamento: {decodeText(character)}
+          </p>
         </div>
-        {/* Adopt button */}
+        {/* Botón Adoptar */}
         <Link className='block text-center text-base font-semibold text-primary bg-secondary rounded-lg py-2' to={`/petdetails/${id}`}>
-          Adoptar
+          Adopt
         </Link>
       </div>
     </div>
