@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import logo from '/logo.svg'
-import burger from '/Burger.svg'
+import logo from '/Logo.svg'
 import { Link } from 'react-router-dom'
 import LogoutButton from './LogoutButton'
 import { useAuth } from '../context/AuthContext'
 import useToken from '../hooks/useToken'
+import { Icon } from '@iconify/react/dist/iconify.js'
 
 const ROUTES = [
   {
@@ -60,20 +60,19 @@ const StickyNavbar = () => {
   }
 
   return (
-    <header className='flex items-center justify-between py-4 px-8'>
-      <Link to={'/'}>
-        <img className='md:w-[105px] md:h-[49px]' src={logo} alt='Logo' />
+    <header className='flex items-center justify-between py-4 px-8 h-[60px] '>
+      <Link className='h-full' to={'/'}>
+        <img className='h-full w-auto' src={logo} alt='Logo' />
       </Link>
       <button
         className='md:hidden text-xl text-gray-800 bg-transparent border-0 cursor-pointer'
         onClick={toggleNav}
       >
-        <img className='max-w-20' src={burger} alt='menu icon' />
+        <Icon icon="iconamoon:menu-burger-horizontal-fill" className="text-xl" />
       </button>
       <nav
-        className={`w-full z-10 fixed top-0 right-0 bottom-0 bg-pink-default text-black p-8 shadow-md transition-all duration-300 ease-in-out ${
-          isNavVisible ? 'opacity-100 visible' : 'opacity-0 invisible'
-        } md:static md:flex md:items-center md:gap-4 md:p-0 md:bg-transparent md:shadow-none md:opacity-100 md:visible`}
+        className={`w-full z-10 fixed top-0 right-0 bottom-0 bg-pink-default text-black p-8 shadow-md transition-all duration-300 ease-in-out ${isNavVisible ? 'opacity-100 visible' : 'opacity-0 invisible'
+          } md:static md:flex md:items-center md:gap-4 md:p-0 md:bg-transparent md:shadow-none md:opacity-100 md:visible`}
         id='nav'
       >
         <button
