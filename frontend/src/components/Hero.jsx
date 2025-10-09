@@ -1,19 +1,19 @@
 const Hero = () => {
   return (
-    <div className='w-full px-4 bg-pink-default flex justify-center items-center rounded-b-2xl text-blue-darker'>
-      <div className='h-[190px] sm:h-[250px] md:h-[250]'>
+    <div className='w-full px-4 bg-secondary flex justify-center items-center gap-2'>
+      <div className='w-[200px]'>
         <img
-          className='h-full object-cover object-bottom w-auto'
-          src='/woman.png'
+          className='h-auto object-cover w-full'
+          src='/woman.svg'
           alt='Woman with your dog'
         />
       </div>
-      <div className='w-1/2'>
-        <h1 className='text-2xl font-semibold pb-4 sm:text-3xl md:text-[30px]'>
-          Adoptá.
+      <div className='w-1/2 space-y-4'>
+        <h1 className='font-semibold'>
+          PatitasHere
         </h1>
-        <p className='text-[12px] sm:text-xl md:text-[20px] font-medium md:pr-[70px]'>
-          Tu calidad de vida mejora, su vida cambia.
+        <p className='text-primary font-semibold'>
+          Donde las patitas encuentran su hogar para siempre.
         </p>
       </div>
     </div>
