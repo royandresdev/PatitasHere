@@ -56,7 +56,7 @@ const Home = () => {
         <h2 className='text-center text-primary'>¿Cómo funciona?</h2>
         <p className='text-center'>Adoptar es muy fácil. Seguí estos simples pasos y en poco tiempo tendrás un nuevo miembro en tu familia.</p>
         {/* Steps */}
-        <div className='grid grid-cols-2 gap-3'>
+        <div className='grid grid-cols-1 gap-3'>
           {/* Step 1 */}
           <div className='flex flex-col items-center space-y-4 p-4'>
             <div className='size-10 flex items-center justify-center bg-secondary rounded-full'>
