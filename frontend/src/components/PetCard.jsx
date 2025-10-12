@@ -52,7 +52,7 @@ const PetCard = ({ name, gender, age, size, character, image, id }) => {
         </div>
         {/* Botón Adoptar */}
         <Link className='block text-center text-base font-semibold text-primary bg-secondary rounded-lg py-2' to={`/petdetails/${id}`}>
-          Adopt
+          Adoptar
         </Link>
       </div>
     </div>
