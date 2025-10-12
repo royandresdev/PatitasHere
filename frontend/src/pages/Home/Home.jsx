@@ -61,7 +61,7 @@ const Home = () => {
       <Hero />
 
       {/* Section: What do you want to adopt? */}
-      <div className='container m-auto p-4'>
+      <div className='container m-auto p-4 lg:max-w-[768px]'>
         <section className='space-y-8 w-full'>
           <h2 className='text-center text-primary'>
             ¿Qué queres adoptar?
@@ -77,7 +77,7 @@ const Home = () => {
       <section className='w-full bg-primary'>
         <div className='container m-auto py-6 px-4 space-y-2'>
           <h2 className='text-white text-center'>Nuestro impacto en números</h2>
-          <dl className='grid grid-cols-2 gap-3'>
+          <dl className='grid grid-cols-2 lg:grid-cols-4 gap-3'>
             {/* Card: Pets adopted */}
             <div className='w-full text-center space-y-2 py-4'>
               <dt className='text-3xl!'>🐕</dt>
@@ -109,7 +109,7 @@ const Home = () => {
       {/* Section: How it works */}
       <section className='container px-4 py-8 space-y-2 m-auto'>
         <h2 className='text-center text-primary'>¿Cómo funciona?</h2>
-        <p className='text-center'>Adoptar es muy fácil. Seguí estos simples pasos y en poco tiempo tendrás un nuevo miembro en tu familia.</p>
+        <p className='text-center text-primary lg:max-w-[620px] m-auto'>Adoptar es muy fácil. Seguí estos simples pasos y en poco tiempo tendrás un nuevo miembro en tu familia.</p>
         {/* Steps */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
           {/* Step 1 */}
@@ -152,7 +152,7 @@ const Home = () => {
       <section className='container m-auto px-4 space-y-3'>
         <h2 className='text-center text-primary'>Adopción urgente</h2>
         <p className='text-left text-primary'>Estas mascotas necesitan un hogar con urgencia. Cada una tiene una historia especial y está esperando encontrar una familia que las ame.</p>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 py-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-4'>
           {urgentPets.map((pet) => (
             <PetCard
               key={pet.id}
@@ -177,7 +177,7 @@ const Home = () => {
         <h2 className='text-primary text-center'>Historias que nos inspiran</h2>
         <p className='text-primary text-left'>Conocé las experiencias de quienes ya encontraron a su compañero ideal a través de nuestra plataforma.</p>
         {/* Testimonials list */}
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 py-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-4'>
           {testimonialList.map((testimonial, index) => (
             <TestimonialCard
               key={index}
