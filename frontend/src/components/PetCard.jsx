@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
+import { Icon } from "@iconify/react";
 
-const IMG_FOLDER_URL = import.meta.env.VITE_IMG_FOLDER_URL
-
-const PetCard = ({ nombre, sexo, edad, tamaño, caracter, imagen, id }) => {
+const PetCard = ({ name, gender, age, size, character, image, id }) => {
   const decodeText = (text) => {
     try {
+      if (!text) return ''
       const bytes = new Uint8Array(
         text.split('').map((char) => char.charCodeAt(0))
       )
@@ -20,29 +20,39 @@ const PetCard = ({ nombre, sexo, edad, tamaño, caracter, imagen, id }) => {
   }
 
   return (
-    <div className='rounded-[14px] overflow-hidden shadow-[0_0_25px_0_#0000001A] pb-[37px] flex flex-col w-full max-w-[357px] md:max-w-[202px] lg:max-w-[281px] mx-auto'>
-      <div className='bg-[#F9D7BD] h-[265px] w-full rounded-b-[14px]'>
+    <div className='rounded-2xl overflow-hidden shadow-lg pb-4 w-full'>
+      {/* Pet image */}
+      <div className='bg-white aspect-video w-full rounded-b-[14px]'>
         <img
-          className='w-full h-full rounded-b-[14px]'
-          src={`${imagen}`}
-          alt={`Imagen de ${nombre}`}
+          className='w-full h-full rounded-b-[14px] object-cover object-center'
+          src={`${image}`}
+          alt={`Image of ${name}`}
           onError={handleImageError}
         />
       </div>
-      <div className='px-7 text-[18px] text-[#002140] md:flex md:flex-col flex-grow justify-between'>
-        <div>
-          <h2 className='text-center text-[18px] font-medium mt-[15px] mb-3'>
-            {nombre}
-          </h2>
-          <p className='md:text-[14px]'>Sexo: {sexo}</p>
-          <p className='md:text-[14px]'>Edad: {edad}</p>
-          <p className='md:text-[14px]'>Tamaño: {tamaño}</p>
-          <p className='md:text-[14px]'>Carácter: {decodeText(caracter)}</p>
+      <div className='px-4 space-y-3'>
+        {/* Pet name */}
+        <h3 className='text-center text-[18px] font-medium mt-[15px] mb-3'>
+          {name}
+        </h3>
+        {/* Detalles de la mascota */}
+        <div className='space-y-1'>
+          <p className='text-primary flex gap-2'>
+            <Icon icon="streamline-plump:intersex-symbol-remix" className='text-xl' /> Género: {gender}
+          </p>
+          <p className='text-primary flex gap-2'>
+            <Icon icon="streamline-flex:pet-paw-solid" className='text-xl' /> Edad: {age}
+          </p>
+          <p className='text-primary flex gap-2'>
+            <Icon icon="material-symbols:height-rounded" className='text-xl' /> Tamaño: {size}
+          </p>
+          <p className='text-primary flex gap-2'>
+            <Icon icon="material-symbols-light:pet-supplies" className='text-xl' /> Temperamento: {decodeText(character)}
+          </p>
         </div>
-        <Link to={`/petdetails/${id}`}>
-          <button className='text-[20px] font-semibold bg-[#FDE4D1] rounded-[14px] py-2 w-full mt-[15px]'>
-            Adoptar
-          </button>
+        {/* Botón Adoptar */}
+        <Link className='block text-center text-base font-semibold text-primary bg-secondary rounded-lg py-2' to={`/petdetails/${id}`}>
+          Adoptar
         </Link>
       </div>
     </div>
