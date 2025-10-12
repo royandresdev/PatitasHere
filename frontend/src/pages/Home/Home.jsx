@@ -75,7 +75,7 @@ const Home = () => {
 
       {/* Section: Our impact in numbers */}
       <section className='w-full bg-primary'>
-        <div className='container py-6 px-4 space-y-2'>
+        <div className='container m-auto py-6 px-4 space-y-2'>
           <h2 className='text-white text-center'>Nuestro impacto en números</h2>
           <dl className='grid grid-cols-2 gap-3'>
             {/* Card: Pets adopted */}
@@ -107,11 +107,11 @@ const Home = () => {
       </section>
 
       {/* Section: How it works */}
-      <section className='container px-4 py-8 space-y-2'>
+      <section className='container px-4 py-8 space-y-2 m-auto'>
         <h2 className='text-center text-primary'>¿Cómo funciona?</h2>
         <p className='text-center'>Adoptar es muy fácil. Seguí estos simples pasos y en poco tiempo tendrás un nuevo miembro en tu familia.</p>
         {/* Steps */}
-        <div className='grid grid-cols-1 gap-3'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
           {/* Step 1 */}
           <div className='flex flex-col items-center space-y-4 p-4'>
             <div className='size-10 flex items-center justify-center bg-secondary rounded-full'>
@@ -149,10 +149,10 @@ const Home = () => {
       </section>
 
       {/* Section: Urgent adoption */}
-      <section className='container px-4 space-y-3'>
+      <section className='container m-auto px-4 space-y-3'>
         <h2 className='text-center text-primary'>Adopción urgente</h2>
         <p className='text-left text-primary'>Estas mascotas necesitan un hogar con urgencia. Cada una tiene una historia especial y está esperando encontrar una familia que las ame.</p>
-        <div className='grid grid-cols-1 gap-3 py-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 py-4'>
           {urgentPets.map((pet) => (
             <PetCard
               key={pet.id}
@@ -173,11 +173,11 @@ const Home = () => {
       </section>
 
       {/* Section: Testimonials */}
-      <section className='container px-4 py-8 space-y-2'>
+      <section className='container m-auto px-4 py-8 space-y-2'>
         <h2 className='text-primary text-center'>Historias que nos inspiran</h2>
         <p className='text-primary text-left'>Conocé las experiencias de quienes ya encontraron a su compañero ideal a través de nuestra plataforma.</p>
         {/* Testimonials list */}
-        <div className='grid grid-cols-1 gap-4 py-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 py-4'>
           {testimonialList.map((testimonial, index) => (
             <TestimonialCard
               key={index}

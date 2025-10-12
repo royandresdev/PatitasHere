@@ -48,7 +48,7 @@ h3 {
   color: var(--color-primary);
 
   @media (width > 640px) {
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-h5);
   }
 }
 h4 {
