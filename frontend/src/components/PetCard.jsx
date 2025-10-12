@@ -24,7 +24,7 @@ const PetCard = ({ name, gender, age, size, character, image, id }) => {
       {/* Pet image */}
       <div className='bg-white aspect-video w-full rounded-b-[14px]'>
         <img
-          className='w-full h-full rounded-b-4 object-cover object-center'
+          className='w-full h-full rounded-b-[14px] object-cover object-center'
           src={`${image}`}
           alt={`Image of ${name}`}
           onError={handleImageError}
