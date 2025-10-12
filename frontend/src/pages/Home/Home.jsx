@@ -59,8 +59,9 @@ const Home = () => {
   return (
     <div id='home' className='space-y-2'>
       <Hero />
-      <div className='container p-4'>
-        {/* Section: What do you want to adopt? */}
+
+      {/* Section: What do you want to adopt? */}
+      <div className='container m-auto p-4'>
         <section className='space-y-8 w-full'>
           <h2 className='text-center text-primary'>
             ¿Qué queres adoptar?
