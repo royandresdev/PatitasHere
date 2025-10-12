@@ -175,7 +175,7 @@ const Home = () => {
       {/* Section: Testimonials */}
       <section className='container m-auto px-4 py-8 space-y-2'>
         <h2 className='text-primary text-center'>Historias que nos inspiran</h2>
-        <p className='text-primary text-left'>Conocé las experiencias de quienes ya encontraron a su compañero ideal a través de nuestra plataforma.</p>
+        <p className='text-primary text-left lg:text-center'>Conocé las experiencias de quienes ya encontraron a su compañero ideal a través de nuestra plataforma.</p>
         {/* Testimonials list */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-4'>
           {testimonialList.map((testimonial, index) => (

@@ -64,6 +64,19 @@ const StickyNavbar = () => {
       <Link className='h-full' to={'/'}>
         <img className='h-full w-auto' src={logo} alt='Logo' />
       </Link>
+      <nav>
+        <ul className='flex gap-8 items-center text-primary font-semibold'>
+          <li>
+            <a href="/search/adoptionForm">Consultar Solicitud</a>
+          </li>
+          <li>
+            <a href="/about">Sobre Nosotros</a>
+          </li>
+          <li>
+            <a href="/login">Iniciar sesión</a>
+          </li>
+        </ul>
+      </nav>
       <button
         className='lg:hidden text-xl text-gray-800 bg-transparent border-0 cursor-pointer'
         onClick={toggleNav}
