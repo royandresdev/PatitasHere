@@ -32,23 +32,13 @@
   --font-size-small-regular: 14px;
 }
 
-h1 {
-  font-size: var(--font-size-h5);
-  font-family: var(--font-family-main);
-  font-weight: bold;
-  color: var(--color-primary);
-
-  @media (width > 640px) {
-    font-size: var(--font-size-h1);
-  }
-}
 h2 {
   font-size: var(--font-size-h6);
   font-family: var(--font-family-main);
   font-weight: bold;
 
   @media (width > 640px) {
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h5);
   }
 }
 h3 {
@@ -58,7 +48,7 @@ h3 {
   color: var(--color-primary);
 
   @media (width > 640px) {
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-h5);
   }
 }
 h4 {

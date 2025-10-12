@@ -60,7 +60,7 @@ const StickyNavbar = () => {
   }
 
   return (
-    <header className='flex items-center justify-between py-4 px-8 h-[60px] '>
+    <header className='flex items-center justify-between py-4 px-8 h-[60px] container mx-auto'>
       <Link className='h-full' to={'/'}>
         <img className='h-full w-auto' src={logo} alt='Logo' />
       </Link>
