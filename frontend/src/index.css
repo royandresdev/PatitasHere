@@ -40,6 +40,10 @@ h2 {
   @media (width > 640px) {
     font-size: var(--font-size-h5);
   }
+
+  @media (width > 1024px) {
+    font-size: var(--font-size-h4);
+  }
 }
 h3 {
   font-size: var(--font-size-h6);
