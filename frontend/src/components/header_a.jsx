@@ -65,7 +65,7 @@ const StickyNavbar = () => {
         <img className='h-full w-auto' src={logo} alt='Logo' />
       </Link>
       <nav>
-        <ul className='flex gap-8 items-center text-primary font-semibold'>
+        <ul className='hidden lg:flex gap-8 items-center text-primary font-semibold'>
           <li>
             <a href="/search/adoptionForm">Consultar Solicitud</a>
           </li>
